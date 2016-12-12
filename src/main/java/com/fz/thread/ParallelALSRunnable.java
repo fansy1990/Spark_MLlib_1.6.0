@@ -7,7 +7,7 @@ import com.fz.util.HUtils;
 import com.fz.util.Utils;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.util.ToolRunner;
-import org.apache.mahout.cf.taste.hadoop.als.ParallelALSFactorizationJob;
+//import org.apache.mahout.cf.taste.hadoop.als.ParallelALSFactorizationJob;
 
 /**
  * parallel als recommend
@@ -43,7 +43,8 @@ public class ParallelALSRunnable implements RunnableWithArgs {
 			HUtils.getFs().delete(new Path("temp"), true);
 			HUtils.getFs().delete(new Path(output), true);
 			
-			int ret = ToolRunner.run(HUtils.getConf()	,new ParallelALSFactorizationJob()	, args);
+			int ret = 0;
+//            ret = ToolRunner.run(HUtils.getConf()	,new ParallelALSFactorizationJob()	, args);
 			if(ret==0){// 所有任务运行完成
 				HUtils.setALLJOBSFINISHED(true);
 			}
