@@ -167,6 +167,7 @@ public class DBService {
 	public boolean insertHConstants(){
 		try{
 			baseDao.executeHql("delete HConstants");
+            baseDao.executeHql("create HConstants");
 			baseDao.save(new HConstants("mapreduce.app-submission.cross-platform","true","是否跨平台提交任务"));
 			baseDao.save(new HConstants("fs.defaultFS","hdfs://node101:8020","namenode主机及端口"));
 			baseDao.save(new HConstants("mapreduce.framework.name","yarn","mapreduce 使用配置"));

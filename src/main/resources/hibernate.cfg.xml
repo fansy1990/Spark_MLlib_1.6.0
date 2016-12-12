@@ -9,7 +9,7 @@
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>  
         <property name="jdbc.batch_size">20</property>  
         <property name="connection.autocommit">true</property>  
-  		<property name="hibernate.hbm2ddl.auto">update</property>
+  		<property name="hibernate.hbm2ddl.auto">create</property>
         <!-- 显示sql语句 -->  
         <property name="show_sql">true</property>  
         <property name="connection.useUnicode">true</property>  

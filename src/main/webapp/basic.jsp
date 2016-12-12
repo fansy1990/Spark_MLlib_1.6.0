@@ -15,7 +15,8 @@
 <body  class="easyui-layout">
 	
 	<div data-options="region:'north',border:false" style="height:60px;background:#feeebd;padding:10px;">
-	<h1 style="font-size:20px">Mahout algorithm </h1> </div>
+	    <h1 style="font-size:20px">Spark Algorithm </h1>
+    </div>
 	<div data-options="region:'west',split:true,title:'West'" style="width:220px;padding:10px;">
 		<ul id="navid" class="easyui-tree" data-options="url:'tree_data.json',method:'get',animate:true,dnd:true"></ul>
 	</div>
