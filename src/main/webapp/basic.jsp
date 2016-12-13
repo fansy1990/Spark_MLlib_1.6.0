@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Mahout algorithm</title>
+	<title>Spark Algorithm</title>
 	<link rel="stylesheet" type="text/css" href="themes/ui-sunny/easyui.css">
 	<link rel="stylesheet" type="text/css" href="themes/icon.css">
 	<link rel="stylesheet" type="text/css" href="css/demo.css">
@@ -15,7 +15,7 @@
 <body  class="easyui-layout">
 	
 	<div data-options="region:'north',border:false" style="height:60px;background:#feeebd;padding:10px;">
-	    <h1 style="font-size:20px">Spark Algorithm </h1>
+	    <h1 style="font-size:20px">Spark Algorithm Platform</h1>
     </div>
 	<div data-options="region:'west',split:true,title:'West'" style="width:220px;padding:10px;">
 		<ul id="navid" class="easyui-tree" data-options="url:'tree_data.json',method:'get',animate:true,dnd:true"></ul>

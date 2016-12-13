@@ -12,149 +12,58 @@
 			分类与回归（Classification and regression）
 				<ul>
 					<li>
-					vectordump : Dump vectors from a sequence file to text -
+					SVM : 支持向量机 -
 					</li>
 					<li>
-					clusterdump : Dump cluster output to text +
+					logistic regression : 逻辑回归 -
 					</li>
-					<li>seqdumper : Generic Sequence File dumper +</li>
-					 <li>lucene.vector : Generate Vectors from a Lucene index -</li>
-					 <li>arff.vector : Generate Vectors from an ARFF file or directory +</li>
-					<li>rowid : Map SequenceFile&lt;Text,VectorWritable&gt; to {SequenceFile&lt;IntWritable,VectorWritable&gt;, SequenceFile&lt;IntWritable,Text&gt;} -</li>
-					<li>split : Split Input data into test and train sets -</li>
-					<li>matrixdump : Dump matrix in CSV format -</li>
-					<li>regexconverter : Convert text files on a per line basis based on regular expressions - </li>
-					 <li>seqdirectory : Generate sequence files (of Text) from a directory - </li>
-					 <li>seq2sparse: Sparse Vector generation from Text sequence files - </li>
-					 <li>seq2encoded: Encoded Sparse Vector generation from Text sequence files - </li>
-					<li>seqwiki : Wikipedia xml dump to sequence file - </li>
-					<li>seqmailarchives : Creates SequenceFile from a directoy containing gzipped mail archives - </li>
-					<li>lucene2seq : Generate Text SequenceFiles from a Lucene index -</li>
-					 <li>concatmatrices : Concatenates 2 matrices of same cardinality into a single matrix -</li>
-					 <li>resplit : Splits a set of SequenceFiles into a number of equal splits +</li>
-					<li>qualcluster : Runs clustering experiments and summarizes results in a CSV -</li>
-					<li>describe : Describe the fields and target variable in a data set +</li>
-				</ul>
+					<li>linear regression : 线性回归 - </li>
+				    <li>naive Bayes : 朴素贝叶斯 - </li>
+                    <li>decision trees : 决策树 -</li>
+                    <li>Random Forests : 随机森林 - </li>
+                    <li>Gradient-Boosted Trees :  - </li>
+                </ul>
 			
 			</li>
 			<li>
-			Math
+			协同过滤（Collaborative Filtering）
 				<ul>
 					<li>
-					transpose : Take the transpose of a matrix -
+					ALS : 交替二乘法 -
 					</li>
-					<li>
-					matrixmult : Take the product of two matrices -
-					</li>
-					<li>
-					svd : Lanczos Singular Value Decomposition -
-					</li>
-					<li>cleansvd : Cleanup and verification of SVD output -</li>
-					<li>rowsimilarity : Compute the pairwise similarities of the rows of a matrix -</li>
-					<li>vecdist : Compute the distances between a set of Vectors (or Cluster or Canopy, they must fit in memory) and a list of Vectors +</li>
-					<li>ssvd : Stochastic SVD -</li>
 				</ul>
 			</li>
 			<li>
-			Clustering
+			聚类（Clustering）
 				<ul>
 					<li>
-					kmeans : K-means clustering +
+					kmeans : K-means clustering -
 					</li>
-					<li>
-					fkmeans : Fuzzy K-means clustering +
-					</li>
-					<li>
-					cvb : LDA via Collapsed Variation Bayes (0th deriv. approx) -
-					</li>
+
 					<li>...</li>
 				</ul>
 			</li>
 			<li>
-			Classification
+                降维（Dimensionality reduction）
 				<ul>
 					<li>
-					trainnb : Train the Vector-based Bayes classifier +
+					SVD : -
 					</li>
 					<li>
-					testnb : Test the Vector-based Bayes classifier +
-					</li>
-					<li>
-					buildforest : Build the random forest classifier +
-					</li>
-					<li>
-					testforest : Test the random forest classifier +
+					。。。
 					</li>
 				</ul>
 			</li>
 			<li>
-			SGD -
+			关联规则（Frequent pattern mining）
 				<ul>
 					<li>
-					trainlogistic : Train a logistic regression using stochastic gradient descent
+					Fp-Growth : -
 					</li>
-					<li>
-					runlogistic : Run a logistic regression model against CSV data
-					</li>
-					<li>
-					cat : Print a file or resource as the logistic regression models would see it
-					</li>
-					<li>
-					trainAdaptiveLogistic : Train an AdaptivelogisticRegression model
-					</li>
-					<li>
-					validateAdaptiveLogistic : Validate an AdaptivelogisticRegression model against hold-out data set
-					</li>
-					<li>
-					runAdaptiveLogistic : Score new production data using a probably trained and validated AdaptivelogisticRegression model
-					</li>
+                    <li>...</li>
 				</ul>
 			</li>
-			<li>
-			HMM -
-				<ul>
-					<li>
-					baumwelch : Baum-Welch algorithm for unsupervised HMM training
-					</li>
-					<li>
-					viterbi : Viterbi decoding of hidden states from given output states sequence
-					</li>
-					<li>
-					hmmpredict : Generate random sequence of observations by given HMM
-					</li>
-				</ul>
-			</li>
-			<li>
-			Classifier Utils -
-				<ul>
-					<li>
-					 cmdump : Dump confusion matrix in HTML or text formats
-					</li>
-				</ul>
-			</li>
-			<li>
-			Recommenders
-				<ul>
-					<li>
-					splitDataset : split a rating dataset into training and probe parts +
-					</li>
-					<li>
-					evaluateFactorization : compute RMSE and MAE of a rating matrix factorization against probes +
-					</li>
-					<li>
-					itemsimilarity : Compute the item-item-similarities for item-based collaborative filtering +
-					</li>
-					<li>
-					recommenditembased : Compute recommendations using item-based collaborative filtering +
-					</li>
-					<li>
-					parallelALS : ALS-WR factorization of a rating matrix +
-					</li>
-					<li>
-					recommendfactorized : Compute recommendations using the factorization of a rating matrix +
-					</li>
-				</ul>
-			</li>
+
 		</ul>
 	</div>
   </body>

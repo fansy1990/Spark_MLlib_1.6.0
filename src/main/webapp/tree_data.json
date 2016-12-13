@@ -1,6 +1,6 @@
 [{
 	"id":1,
-	"text":"Mahout MR",
+	"text":"Spark MLLib",
 	"attributes":{
 		"url":"abc",
 		"title":"aaa",
@@ -15,7 +15,7 @@
 		"state":"open",
 		"children":[{
 			"id":110,
-			"text":"Hadoop配置表",
+			"text":"集群参数表",
 			"attributes":{
 				"folder":"0",
 				"url":"db/hconstants.jsp"
