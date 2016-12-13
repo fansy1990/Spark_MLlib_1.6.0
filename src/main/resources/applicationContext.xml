@@ -39,7 +39,7 @@
         <!-- 自动扫描注解方式配置的hibernate类文件 -->  
         <property name="packagesToScan">  
             <list>  
-                <value>com.com.fz.model</value>
+                <value>com.fz.model</value>
             </list>  
         </property>  
     </bean>  
