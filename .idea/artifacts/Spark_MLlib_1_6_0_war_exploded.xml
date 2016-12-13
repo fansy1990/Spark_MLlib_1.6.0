@@ -1,12 +1,15 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="Spark_MLlib_1.6.0:war exploded">
-    <output-path>$PROJECT_DIR$/target/v1_6</output-path>
+    <output-path>$PROJECT_DIR$/target/artifacts/Spark_MLlib_1_6_0_war_exploded</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="Spark_MLlib_1.6.0" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.8.4" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.4" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjlib:1.6.2" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.21" />
           <element id="library" level="project" name="Maven: c3p0:c3p0:0.9.1.2" />
           <element id="library" level="project" name="Maven: org.apache.struts:struts2-core:2.3.1" />
@@ -214,9 +217,6 @@
           <element id="library" level="project" name="Maven: org.apache.hadoop:hadoop-mapreduce-client-shuffle:2.6.0-cdh5.7.3" />
           <element id="library" level="project" name="Maven: org.apache.hadoop:hadoop-yarn-server-nodemanager:2.6.0-cdh5.7.3" />
         </element>
-      </element>
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="Spark_MLlib_1.6.0/web/Web" />
     </root>

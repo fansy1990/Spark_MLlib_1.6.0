@@ -14,7 +14,7 @@
     
     
       <package name ="test" namespace="/test" extends="struts-default">
-      		<action name ="test_*" method="{1}" class="com.com.com.fz.action.TestAction" >
+      		<action name ="test_*" method="{1}" class="com.fz.action.TestAction" >
       		<!-- 	 <result name="success">/success.jsp</result>  
             	<result name="error">/error.jsp</result>   
             -->
@@ -22,10 +22,10 @@
       </package>
       
       <package name ="dB" namespace="/dB" extends="struts-default">
-      		<action name ="dB_*" method="{1}" class="com.com.com.fz.action.DBAction" />
+      		<action name ="dB_*" method="{1}" class="com.fz.action.DBAction" />
       </package>
       <package name ="cloud" namespace="/cloud" extends="struts-default">
-      		<action name ="cloud_*" method="{1}" class="com.com.com.fz.action.CloudAction" />
+      		<action name ="cloud_*" method="{1}" class="com.fz.action.CloudAction" />
       </package>
       
 </struts> 
