@@ -6,7 +6,7 @@ Hibernate4.3.1，struts2.3.1，Maven3.2.1，Spark1.6
 
 1. 部署：
   1）配置好db.properties中相应用户名密码／数据库等参数；
-  2）修改
+  2）第一次启动tomcat，修改hibernate.cfg.xml文件中的hibernate.hbm2ddl.auto值为create，第二次启动修改为update；
 
 包含MLlib中各种算法演示：
 

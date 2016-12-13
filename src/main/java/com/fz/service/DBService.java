@@ -19,7 +19,6 @@ import java.util.Map;
 /**
  * 数据库service
  * @author fansy
- * @param <T>
  * @date 2015-6-10
  */
 @Service("dBService")
@@ -78,7 +77,6 @@ public class DBService {
 	
 	/**
 	 * 保存数据
-	 * @param tableName
 	 * @param list
 	 * @return
 	 */
@@ -167,14 +165,18 @@ public class DBService {
 	public boolean insertHConstants(){
 		try{
 			baseDao.executeHql("delete HConstants");
-            baseDao.executeHql("create HConstants");
+            // @TODO 是否需要修改次此配置 ???
 			baseDao.save(new HConstants("mapreduce.app-submission.cross-platform","true","是否跨平台提交任务"));
-			baseDao.save(new HConstants("fs.defaultFS","hdfs://node101:8020","namenode主机及端口"));
+			baseDao.save(new HConstants("fs.defaultFS","hdfs://quickstart:8020","namenode主机及端口"));
 			baseDao.save(new HConstants("mapreduce.framework.name","yarn","mapreduce 使用配置"));
-			baseDao.save(new HConstants("yarn.resourcemanager.address","node101:8032","ResourceManager主机及端口"));
-			baseDao.save(new HConstants("yarn.resourcemanager.scheduler.address","node101:8030","Scheduler主机及端口"));
-			baseDao.save(new HConstants("mapreduce.jobhistory.address","node101:10020","JobHistory主机及端口"));
-		}catch(Exception e){
+			baseDao.save(new HConstants("yarn.resourcemanager.address","quickstart:8032","ResourceManager主机及端口"));
+			baseDao.save(new HConstants("yarn.resourcemanager.scheduler.address","quickstart:8030","Scheduler主机及端口"));
+			baseDao.save(new HConstants("mapreduce.jobhistory.address","quickstart:10020","JobHistory主机及端口"));
+            baseDao.save(new HConstants("spark.assemble.jar",
+                    "hdfs://quickstart:8020/user/root/spark-assembly-1.6.0-cdh5.8.0-hadoop2.6.0-cdh5.8.0.jar",
+                    "Spark assemble jar 在HDFS上的地址"));
+
+        }catch(Exception e){
 			e.printStackTrace();
 			return false;
 		}
@@ -185,7 +187,7 @@ public class DBService {
 	
 	/**
 	 * 获取分类数据占比
-	 * @param i 
+	 * @param k
 	 * @return
 	 */
 	public List<String> getPercent(int k) {
