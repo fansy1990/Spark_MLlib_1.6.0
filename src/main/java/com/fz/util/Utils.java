@@ -32,9 +32,9 @@ public class Utils {
 	// hadoop 常量
 	
 	//
-	public static String baseServicePacakges="com.com.fz.service.*";
-	public static final String THREADPACKAGES ="com.com.fz.thread.";
-	public static final String THREADNOTPACKAGES ="com.com.fz.thread.not.";
+	public static String baseServicePacakges="com.fz.service.*";
+	public static final String THREADPACKAGES ="com.fz.thread.";
+	public static final String THREADNOTPACKAGES ="com.fz.thread.not.";
 	
 	
 //	private static Map<String,String> HADOOPCONSTANTS=new HashMap<String,String>();
@@ -131,7 +131,9 @@ public class Utils {
 	 * @return
 	 */
 	private static String getRootPath(){
-		return ContextLoader.getCurrentWebApplicationContext().getServletContext().getRealPath("/");
+        String rootPath = ContextLoader.getCurrentWebApplicationContext().getServletContext().getRealPath("/");
+//        System.out.println("Root Path:" +rootPath);
+		return rootPath ;
 	}
 	
 	/**

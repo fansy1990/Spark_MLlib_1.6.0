@@ -44,8 +44,8 @@ public class HUtils {
 	private static long jobStartTime = 0L;// 使用 System.currentTimeMillis() 获得
 	private static JobClient jobClient = null;
 	
-	public static final String HDFSPRE= "/user/root";
-	public static final String LOCALPRE= "WEB-INF/classes/data";
+	public static final String HDFSPRE= "/user/algorithm/input";
+	public static final String LOCALPRE= "../../../src/main/data/";
 
 	public static Configuration getConf() {
 

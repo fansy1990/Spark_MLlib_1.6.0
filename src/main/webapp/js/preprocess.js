@@ -17,46 +17,7 @@ $(function(){
 		callByAJax('cloud/cloud_submitJobNotMR.action',{algorithm:'Upload',
 			arg1:input,arg2:output});
 	});
-	
-	$('#upload_recommenders_submit').bind('click', function(){
-		var select_value=$('#recommenders_select').combobox("getValue");;
-		var algorithm_type='recommenders';
-		// 弹出进度框
-		popupProgressbar('数据上传','数据上传中...',1000);
-		// ajax 异步提交任务
-		callByAJax('cloud/cloud_submitJobNotMR.action',{algorithm:'Upload',
-			arg1:select_value,arg2:algorithm_type,arg3:"initial"});
-	});
-	
-	$('#upload_classification_submit').bind('click', function(){
-		var select_value=$('#classification_select').combobox("getValue");;
-		var algorithm_type='classification';
-		// 弹出进度框
-		popupProgressbar('数据上传','数据上传中...',1000);
-		// ajax 异步提交任务
-		callByAJax('cloud/cloud_submitJobNotMR.action',{algorithm:'Upload',
-			arg1:select_value,arg2:algorithm_type,arg3:"initial"});
-	});
-	
-	$('#upload_clustering_submit').bind('click', function(){
-		var select_value=$('#clustering_select').combobox("getValue");;
-		var algorithm_type='clustering';
-		// 弹出进度框
-		popupProgressbar('数据上传','数据上传中...',1000);
-		// ajax 异步提交任务
-		callByAJax('cloud/cloud_submitJobNotMR.action',{algorithm:'Upload',
-			arg1:select_value,arg2:algorithm_type,arg3:"initial"});
-	});
-	
-	$('#upload_utils_submit').bind('click', function(){
-		var select_value=$('#utils_select').combobox("getValue");
-		var algorithm_type='utils';
-		// 弹出进度框
-		popupProgressbar('数据上传','数据上传中...',1000);
-		// ajax 异步提交任务
-		callByAJax('cloud/cloud_submitJobNotMR.action',{algorithm:'Upload',
-			arg1:select_value,arg2:algorithm_type,arg3:"initial"});
-	});
+
 	
 	$('#upload_prepare_submit').bind('click', function(){
 		var select_value=$('#prepare_select').combobox("getValue");;
@@ -70,20 +31,7 @@ $(function(){
 	
 	//=======upload ===================
 	
-	
-	// ==================arff=================
-	$('#arff_submit').bind('click', function(){
-		var input=$('#arff_input').val();
-		var output=$('#arff_output').val();
-		var dictionary=$('#arff_dictionary').val();
-		var delimiter=$('#arff_delimiter').combobox("getValue");
-		// 弹出进度框
-		popupProgressbar('数据转换','Arff文件转换为序列文件中...',1000);
-		// ajax 异步提交任务
-		callByAJax('cloud/cloud_submitJobNotMR.action',{algorithm:'ArffToSeq',
-			arg1:input,arg2:output,arg3:dictionary,arg4:delimiter});
-	});
-	//===================arff===============
+
 	
 	
 	// ============ readtxt

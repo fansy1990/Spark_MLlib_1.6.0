@@ -37,12 +37,12 @@ public class Upload implements INotMRJob {
 		String hdfs=null;
 		if(flag!=null&& "initial".equals(flag)){// initial上传
 			// arg1-> select_value, arg2->algorithm ;arg3->'initial'
-			int index = select_value.indexOf(".");
-			String filename = select_value.substring(0, index);
-			String extendtion=select_value.substring(index);
-			local=HUtils.LOCALPRE+File.separator+algorithm+File.separator+select_value;
-			local = Utils.getRootPathBasedPath(local);
-			hdfs=HUtils.HDFSPRE+"/"+algorithm+"/"+filename+"/input"+extendtion;
+			String filename = select_value;
+
+            local=HUtils.LOCALPRE+select_value;
+
+            local = Utils.getRootPathBasedPath(local);
+			hdfs=HUtils.HDFSPRE+"/"+filename;
 		}else{
 			local=select_value;
 			hdfs = algorithm;
