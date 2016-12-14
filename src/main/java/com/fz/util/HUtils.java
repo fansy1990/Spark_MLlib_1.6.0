@@ -225,7 +225,7 @@ public class HUtils {
 			return ret;
 		}
 		ret.put("flag", "true");
-		ret.put("msg", "HFDS:'"+hdfsPath+"'");
+		ret.put("msg", "HDFS:'"+hdfsPath+"'");
 		return ret;
 	}
 

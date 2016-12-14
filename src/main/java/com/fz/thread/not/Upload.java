@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * 数据上传
  * 统一命名：
-			上传本地文件：WEB-INF/classes/data/<algorithm_type>/<algorithm>.<extendtion>
+			上传本地文件：src/main/data/<algorithm_type>/<algorithm>.<extendtion>
 			上传HDFS文件：/user/root/<algorithm_type>/<algorithm>/input.<extendtion>
  * @author fansy
  * @date 2015年8月5日
