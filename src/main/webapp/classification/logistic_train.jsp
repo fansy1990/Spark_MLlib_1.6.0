@@ -1,32 +1,32 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
  
 <body>
-	<div style="padding-left: 30px;font-size: 20px;padding-top:10px;">朴素贝叶斯训练任务算法调用</div>  
+	<div style="padding-left: 30px;font-size: 20px;padding-top:10px;">逻辑回归模型训练任务算法调用</div>
 	<br>
 	
 	<div style="padding-left: 30px;font-size: 20px;padding-top:10px;">  
 	 
 		<table>
 			<tr>
-				<td><label for="name">HDFS输入路径:</label>
+				<td><label >HDFS输入路径:</label>
 				</td>
 				<td><input class="easyui-validatebox" type="text"
-				 value="/user/root/process/generate_classify/input.seq"
-					id="trainnb_input" data-options="required:true" style="width:300px" />
+				 value="/user/algorithm/input/logistic.dat"
+					id="logistic_train_input" data-options="required:true" style="width:300px" />
 				</td>
 			</tr>
 			
 			<tr>
-				<td><label for="name">HDFS输出路径:</label>
+				<td><label >HDFS输出路径:</label>
 				</td>
 				<td><input class="easyui-validatebox" type="text" 
-				 value="/user/root/classification/trainnb/output"
-					id="trainnb_output" data-options="required:true" style="width:300px" />
+				 value="/user/algorithm/model/logistic/output00"
+					id="logistic_train_output" data-options="required:true" style="width:300px" />
 				</td>
 			</tr>
 			
 			<tr>
-				<td><label for="name">平滑参数:</label>
+				<td><label >平滑参数:</label>
 				</td>
 				<td><input class="easyui-validatebox" type="text" value="1.0"
 					id="trainnb_alphaI" data-options="required:true" style="width:300px" />
@@ -47,7 +47,7 @@
 			</tr>
 			-->
 			<tr>
-				<td><label for="name">HDFS类别存储路径:</label>
+				<td><label >HDFS类别存储路径:</label>
 				</td>
 				<td><input class="easyui-validatebox" type="text" 
 				value="/user/root/classification/trainnb/labelIndex"

@@ -46,24 +46,24 @@
           }]
 	},{
 		"id":13,
-		"text":"工具类MR",
-		"state":"closed",
+		"text":"分类与回归",
+		"state":"open",
 		"attributes":{
 				"folder":"1"
 		},
 		"children":[{
 			"id":131,
-			"text":"vectordump",
+			"text":"逻辑回归",
 			"attributes":{
 				"folder":"0",
-				"url":"utils/vectordump.jsp"
+				"url":"classification/logistic_train.jsp"
 			}
 		},{
 			"id":132,
-			"text":"clusterdump+",
+			"text":"线性回归",
 			"attributes":{
 				"folder":"0",
-				"url":"utils/clusterdump.jsp"
+				"url":"classification/linear_regression_train.jsp"
 			}
 		},{
 			"id":133,

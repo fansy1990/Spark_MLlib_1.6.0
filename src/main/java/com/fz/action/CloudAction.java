@@ -48,7 +48,7 @@ public class CloudAction extends ActionSupport {
 	private String arg11;
 		
 	/**
-	 * 提交MR任务
+	 * 提交Spark MLlib任务
 	 * 算法具体参数意思对照jsp页面理解，每个实体类会把arg1~arg11 转换为实际的意思
 	 */
 	public void submitJob(){	
@@ -84,7 +84,7 @@ public class CloudAction extends ActionSupport {
 	}
 
 	/**
-	 * 提交非MR的任务
+	 * 提交与HDFS交互的任务
 	 * 算法具体参数意思对照jsp页面理解，每个实体类会把arg1~arg11 转换为实际的意思
 	 * @throws ClassNotFoundException 
 	 * @throws IllegalAccessException 
