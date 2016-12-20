@@ -1,26 +1,27 @@
 $(function(){
-	// trainnb---
-	$('#trainnb_submit').bind('click', function(){
-		
-		// 检查是否有“MR监控页面”，如果有，则退出，并提示关闭
-		if(exitsMRmonitor()){
-			return ;
-		}	
-		var input=$('#trainnb_input').val();//
-		var output=$('#trainnb_output').val();//
-		var alphaI=$('#trainnb_alphaI').val();//
-		var labelIndex=$('#trainnb_labelIndex').val();
-//		var trainComplementary=$('#trainnb_trainComplementary').combobox("getValue");;
-		
-		var jobnums_='2'; // 一共的MR个数
-		// 弹出进度框
-		popupProgressbar('分类MR','trainnb任务提交中...',1000);
+	// logistic regression ---
+	$('#logistic_train_submit').bind('click', function(){
+		// get parameters
+		var input=$('#logistic_train_input').val();//
+		var output=$('#logistic_train_output').val();//
+		var targetIndex=$('#logistic_train_targetIndex').numberbox('getValue');//
+		var numClasses=$('#logistic_train_numClasses').numberbox('getValue');//
+		var splitter=$('#logistic_train_splitter').val();
+		var method=$('#logistic_train_method').combobox("getValue");
+		var hasIntercept=$('#logistic_train_hasIntercept').combobox("getValue");
+
+
+		// 弹出进度框 ,不同用户提交没有影响，这里不是interval，而是实实在在的进度
+		popupProgressbar('回归','逻辑回归任务初始化中...',1000);
 		// ajax 异步提交任务
-		
-		callByAJax('cloud/cloud_submitIterMR.action',{algorithm:"TrainNaiveBayesJobRunnable",jobnums:jobnums_,
-			arg1:input,arg2:output,arg3:alphaI,arg4:labelIndex
+		console.info("input:"+input+",output:"+output+",targetIndex:"+targetIndex+
+		",numClasses:"+numClasses+",splitter:"+splitter+",method:"+method+",hasIntercept:"+hasIntercept);
+		// 直接一个进度条显示即可，把进度条拉长点，然后修改器状态，而不是interval设置
+		// 状态有：任务初始化，任务提交完成；任务运行进度（初始化，accept，running，finished）
+//		callByAJax('cloud/cloud_submitIterMR.action',{algorithm:"TrainNaiveBayesJobRunnable",jobnums:jobnums_,
+//			arg1:input,arg2:output,arg3:alphaI,arg4:labelIndex
 //			,arg5:trainComplementary
-			});
+//			});
 		
 	});
 	

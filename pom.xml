@@ -29,6 +29,12 @@
         </repository>
     </repositories>
     <dependencies>
+        <!-- 需要先编译并install Spark_MLlib_Algorithm_1.6.0工程到本地-->
+        <dependency>
+            <groupId>spark</groupId>
+            <artifactId>mllib.algorithm.1.6.0</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <!-- aspectj -->
         <dependency>
             <groupId>org.aspectj</groupId>

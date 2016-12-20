@@ -8,7 +8,7 @@
 	 
 		<table>
 			<tr>
-				<td><label >HDFS输入路径:</label>
+				<td><label >数据输入路径:</label>
 				</td>
 				<td><input class="easyui-validatebox" type="text"
 				 value="/user/algorithm/input/logistic.dat"
@@ -17,46 +17,63 @@
 			</tr>
 			
 			<tr>
-				<td><label >HDFS输出路径:</label>
+				<td><label >模型输出路径:</label>
 				</td>
 				<td><input class="easyui-validatebox" type="text" 
 				 value="/user/algorithm/model/logistic/output00"
 					id="logistic_train_output" data-options="required:true" style="width:300px" />
 				</td>
 			</tr>
-			
+            <tr>
+                <td><label >数据列分隔符:</label>
+                </td>
+                <td><input class="easyui-validatebox" type="text"
+                           value=" "
+                           id="logistic_train_splitter" data-options="required:true" style="width:300px" />
+                </td>
+            </tr>
 			<tr>
-				<td><label >平滑参数:</label>
+				<td><label>目标所在列（从1开始）:</label>
 				</td>
-				<td><input class="easyui-validatebox" type="text" value="1.0"
-					id="trainnb_alphaI" data-options="required:true" style="width:300px" />
+				<td><input class="easyui-numberbox" value="1" data-options="min:1,precision:0"
+					id="logistic_train_targetIndex"  style="width:300px" />
 				</td>
 			</tr>
-			<!--  此参数暂未调通，不使用 
+
 			<tr>
-				<td><label for="name">使用额外的训练:</label>
+				<td><label >逻辑回归函数:</label>
 				</td>
 				<td>
-				<select id="trainnb_trainComplementary" class="easyui-combobox" 
+				<select id="logistic_train_method" class="easyui-combobox"
 					style="width:200px;">
-						<option value="false">否</option>
-						<option value="true">是</option>
+						<option value="SGD">SGD</option>
+						<option value="LBFGS">LBFGS</option>
 
 				</select>
 				</td>
 			</tr>
-			-->
+            <tr>
+                <td><label >是否有截距:</label>
+                </td>
+                <td>
+                    <select id="logistic_train_hasIntercept" class="easyui-combobox"
+                            style="width:200px;">
+                        <option value="true">是</option>
+                        <option value="false">否</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>目标列类别数:</label>
+                </td>
+                <td><input class="easyui-numberbox" value="2" data-options="min:1,precision:0"
+                           id="logistic_train_numClasses"  style="width:300px" />
+                </td>
+            </tr>
+
 			<tr>
-				<td><label >HDFS类别存储路径:</label>
-				</td>
-				<td><input class="easyui-validatebox" type="text" 
-				value="/user/root/classification/trainnb/labelIndex"
-					id="trainnb_labelIndex" data-options="required:true" style="width:300px" />
-				</td>
-			</tr>
-			
-			<tr>
-				<td><a id="trainnb_submit" class="easyui-linkbutton"
+				<td><a id="logistic_train_submit" class="easyui-linkbutton"
 					data-options="iconCls:'icon-door_in'">提交</a></td>
 			</tr>
 			

@@ -5,7 +5,7 @@
 // 弹出progressBar
 // 
 function popupProgressbar(titleStr,msgStr,intervalStr){
-	var win = $.messager.progress({
+	$.messager.progress({
         title:titleStr,
         msg:msgStr,
         interval:intervalStr    //设置时间间隔较长 
